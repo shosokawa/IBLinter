@@ -28,6 +28,13 @@ public struct Rules {
             CustomModuleRule.self,
             UseBaseClassRule.self,
             AmbiguousViewRule.self,
+            ViewAsRetina3_5Rule.self,
+            ViewAsRetina4_0Rule.self,
+            ViewAsRetina4_7Rule.self,
+            ViewAsRetina5_5Rule.self,
+            ViewAsRetina5_9Rule.self,
+            ViewAsRetina6_1Rule.self,
+            ViewAsRetina6_5Rule.self,
         ]
     }()
 

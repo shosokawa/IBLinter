@@ -90,6 +90,83 @@ class RuleTest: XCTestCase {
         let violations = try! rule.validate(xib: XibFile(url: url))
         XCTAssertEqual(violations.count, 1)
     }
+
+    func testViewAsRetina3_5() {
+        let ngUrl = self.url(forResource: "ViewAsRetina6_5Test", withExtension: "storyboard")
+        let ngRule = Rules.ViewAsRetina3_5Rule(context: context(from: .default))
+        let ngViolations = try! ngRule.validate(xib: XibFile(url: ngUrl))
+        XCTAssertEqual(ngViolations.count, 1)
+        let okUrl = self.url(forResource: "ViewAsRetina3_5Test", withExtension: "storyboard")
+        let okRule = Rules.ViewAsRetina3_5Rule(context: context(from: .default))
+        let okViolations = try! okRule.validate(xib: XibFile(url: okUrl))
+        XCTAssertEqual(okViolations.count, 0)
+    }
+
+    func testViewAsRetina4_0() {
+        let ngUrl = self.url(forResource: "ViewAsRetina6_5Test", withExtension: "storyboard")
+        let ngRule = Rules.ViewAsRetina4_0Rule(context: context(from: .default))
+        let ngViolations = try! ngRule.validate(xib: XibFile(url: ngUrl))
+        XCTAssertEqual(ngViolations.count, 1)
+        let okUrl = self.url(forResource: "ViewAsRetina4_0Test", withExtension: "storyboard")
+        let okRule = Rules.ViewAsRetina4_0Rule(context: context(from: .default))
+        let okViolations = try! okRule.validate(xib: XibFile(url: okUrl))
+        XCTAssertEqual(okViolations.count, 0)
+    }
+
+    func testViewAsRetina4_7() {
+        let ngUrl = self.url(forResource: "ViewAsRetina6_5Test", withExtension: "storyboard")
+        let ngRule = Rules.ViewAsRetina4_7Rule(context: context(from: .default))
+        let ngViolations = try! ngRule.validate(xib: XibFile(url: ngUrl))
+        XCTAssertEqual(ngViolations.count, 1)
+        let okUrl = self.url(forResource: "ViewAsRetina4_7Test", withExtension: "storyboard")
+        let okRule = Rules.ViewAsRetina4_7Rule(context: context(from: .default))
+        let okViolations = try! okRule.validate(xib: XibFile(url: okUrl))
+        XCTAssertEqual(okViolations.count, 0)
+    }
+
+    func testViewAsRetina5_5() {
+        let ngUrl = self.url(forResource: "ViewAsRetina6_5Test", withExtension: "storyboard")
+        let ngRule = Rules.ViewAsRetina5_5Rule(context: context(from: .default))
+        let ngViolations = try! ngRule.validate(xib: XibFile(url: ngUrl))
+        XCTAssertEqual(ngViolations.count, 1)
+        let okUrl = self.url(forResource: "ViewAsRetina5_5Test", withExtension: "storyboard")
+        let okRule = Rules.ViewAsRetina5_5Rule(context: context(from: .default))
+        let okViolations = try! okRule.validate(xib: XibFile(url: okUrl))
+        XCTAssertEqual(okViolations.count, 0)
+    }
+
+    func testViewAsRetina5_9() {
+        let ngUrl = self.url(forResource: "ViewAsRetina6_5Test", withExtension: "storyboard")
+        let ngRule = Rules.ViewAsRetina5_9Rule(context: context(from: .default))
+        let ngViolations = try! ngRule.validate(xib: XibFile(url: ngUrl))
+        XCTAssertEqual(ngViolations.count, 1)
+        let okUrl = self.url(forResource: "ViewAsRetina5_9Test", withExtension: "storyboard")
+        let okRule = Rules.ViewAsRetina5_9Rule(context: context(from: .default))
+        let okViolations = try! okRule.validate(xib: XibFile(url: okUrl))
+        XCTAssertEqual(okViolations.count, 0)
+    }
+
+    func testViewAsRetina6_1() {
+        let ngUrl = self.url(forResource: "ViewAsRetina6_5Test", withExtension: "storyboard")
+        let ngRule = Rules.ViewAsRetina6_1Rule(context: context(from: .default))
+        let ngViolations = try! ngRule.validate(xib: XibFile(url: ngUrl))
+        XCTAssertEqual(ngViolations.count, 1)
+        let okUrl = self.url(forResource: "ViewAsRetina6_1Test", withExtension: "storyboard")
+        let okRule = Rules.ViewAsRetina6_1Rule(context: context(from: .default))
+        let okViolations = try! okRule.validate(xib: XibFile(url: okUrl))
+        XCTAssertEqual(okViolations.count, 0)
+    }
+
+    func testViewAsRetina6_5() {
+        let ngUrl = self.url(forResource: "ViewAsRetina3_5Test", withExtension: "storyboard")
+        let ngRule = Rules.ViewAsRetina6_5Rule(context: context(from: .default))
+        let ngViolations = try! ngRule.validate(xib: XibFile(url: ngUrl))
+        XCTAssertEqual(ngViolations.count, 1)
+        let okUrl = self.url(forResource: "ViewAsRetina6_5Test", withExtension: "storyboard")
+        let okRule = Rules.ViewAsRetina6_5Rule(context: context(from: .default))
+        let okViolations = try! okRule.validate(xib: XibFile(url: okUrl))
+        XCTAssertEqual(okViolations.count, 0)
+    }
 }
 
 // MARK: resource utils
